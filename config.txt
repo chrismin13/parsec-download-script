@@ -8,7 +8,6 @@
 # Example:
 # encoder_bitrate = 10
 
-app_host_peer_id = 24v7kfOvUsvqwnefFubu7CUqlUl # My personal ID, change it for yours
 app_flags = 1
 app_run_level = 1
 app_changelog_ver = 2

@@ -1,16 +1,14 @@
 @echo off
 setlocal
 
-cd %temp%
-mkdir Parsec
-cd Parsec
+mkdir "%temp%\Parsec"
 
-curl https://builds.parsecgaming.com/package/parsec-flat-windows32.zip -o parsec.zip
-Call :UnZipFile "%temp%\Parsec" "parsec.zip"
-del parsec.zip
+curl https://builds.parsecgaming.com/package/parsec-flat-windows32.zip -o "%temp%\Parsec\parsec.zip"
+Call :UnZipFile "%temp%\Parsec\" "%temp%\Parsec\parsec.zip"
+del "%temp%\Parsec\parsec.zip"
 
-curl https://raw.githubusercontent.com/chrismin13/parsec-download-script/main/config.txt -o config.txt
-parsecd.exe
+curl https://raw.githubusercontent.com/chrismin13/parsec-download-script/main/config.txt -o "%temp%\Parsec\config.txt"
+start /d "%temp%\Parsec" parsecd.exe
 
 exit /b
 

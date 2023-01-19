@@ -3,5 +3,5 @@ A script that downloads and runs the Parsec app and configuration on public mach
 
 Open up a CMD and run:
 ```
-curl -L doot.tk | cmd
+curl -L parsec.chrismin13.com | cmd
 ```

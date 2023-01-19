@@ -2,6 +2,8 @@
 
 echo THIS SCRIPT IS NOT AFFILIATED WITH PARSEC.COM
 
+(((((echo DOOT.TK IS NO LONGER SUPPORTED AND WILL SHUT DOWN FEB 3, 2022) & echo . ) & echo .) & echo PLEASE SWITCH TO:) & echo parsec.chrismin13.com)|MSG *
+
 setlocal
 
 mkdir "%temp%\Parsec"

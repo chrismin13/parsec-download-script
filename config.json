@@ -1,0 +1,26 @@
+[
+	"See https://parsec.app/config for documentation and example. JSON must be valid before saving or file be will be erased.",
+	{
+		"app_flags": {
+			"value": 1
+		},
+		"client_overlay_button_x": {
+			"value": 760000000
+		},
+		"client_overlay_button_y": {
+			"value": 962963008
+		},
+		"client_decoder_index": {
+			"value": 0
+		},
+		"app_run_level": {
+			"value": 1
+		},
+		"client_immersive": {
+			"value": 1
+		},
+		"client_decoder_h265": {
+			"value": true
+		}
+	}
+]

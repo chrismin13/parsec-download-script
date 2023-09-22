@@ -19,6 +19,9 @@
 		"client_immersive": {
 			"value": 1
 		},
+		"app_changelog_ver": {
+			"value": 8
+		},
 		"client_decoder_h265": {
 			"value": true
 		}

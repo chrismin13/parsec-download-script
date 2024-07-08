@@ -1,18 +1,22 @@
 @echo off
 
-:: ====== ------ ======
-:: This script is not affiliated with parsec.app.
-:: For help and support, visit: 
-:: https://github.com/chrismin13/parsec-download-script/
-:: ====== ------ ======
+echo ====== ------ ======
+echo This script is not affiliated with parsec.app.
+echo For help and support, visit: 
+echo https://github.com/chrismin13/parsec-download-script/
+echo ====== ------ ======
 
-mkdir "%temp%\Parsec"
-curl https://builds.parsecgaming.com/package/parsec-flat-windows.zip -o "%temp%\Parsec\parsec.zip"
-Call :UnZipFile "%temp%\Parsec\" "%temp%\Parsec\parsec.zip"
-del "%temp%\Parsec\parsec.zip"
-curl https://raw.githubusercontent.com/chrismin13/parsec-download-script/main/config.txt -o "%temp%\Parsec\config.txt" -fsSL
-start /d "%temp%\Parsec" parsecd.exe
+if exist "%temp%\ParsecPortable" (
+    rmdir /s /q "%temp%\ParsecPortable"
+)
+mkdir "%temp%\ParsecPortable"
+curl https://builds.parsecgaming.com/package/parsec-flat-windows.zip -o "%temp%\ParsecPortable\parsec.zip"
+Call :UnZipFile "%temp%\ParsecPortable\" "%temp%\ParsecPortable\parsec.zip"
+del "%temp%\ParsecPortable\parsec.zip"
+curl https://raw.githubusercontent.com/chrismin13/parsec-download-script/main/config.txt -o "%temp%\ParsecPortable\config.txt" -fsSL
+start /d "%temp%\ParsecPortable" parsecd.exe
 exit /b
+
 :UnZipFile <ExtractTo> <newzipfile>
 set vbs="%temp%\_.vbs"
 if exist %vbs% del /f /q %vbs%
